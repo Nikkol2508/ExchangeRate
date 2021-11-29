@@ -35,7 +35,8 @@ public class ExchangeControllerIntegrationTest {
 
         this.mockMvc.perform(get("/rub"))
                 .andDo(print())
-                .andExpect(status().is3xxRedirection());
+                .andExpect(status().is3xxRedirection())
+        ;
     }
 
     @Test
@@ -44,7 +45,8 @@ public class ExchangeControllerIntegrationTest {
         this.mockMvc.perform(get("/jkhglkg"))
                 .andDo(print())
                 .andExpect(status().is3xxRedirection())
-                .andExpect(redirectedUrl("https://docs.openexchangerates.org/docs/supported-currencies"));
+                .andExpect(redirectedUrl("https://docs.openexchangerates.org/docs/supported-currencies"))
+        ;
     }
 
 }
